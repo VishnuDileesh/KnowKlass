@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "knowklass"
+    }
+  },
+  "defaultProject": "knowklass",
+  "cli": {
+    "analytics": "4ed3d5c1-ffb5-4a62-83c2-f1c3939f01bd"
+  }
 }
