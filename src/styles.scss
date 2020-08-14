@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+$dark-blue: #130f40;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $dark-blue;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  color: white;
+  background-color: $dark-blue;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+}
