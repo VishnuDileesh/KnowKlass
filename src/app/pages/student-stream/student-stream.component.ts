@@ -11,11 +11,11 @@ import {
 import { compileNgModule } from '@angular/compiler';
 
 @Component({
-  selector: 'app-stream-room',
-  templateUrl: './stream-room.component.html',
-  styleUrls: ['./stream-room.component.scss'],
+  selector: 'app-student-stream',
+  templateUrl: './student-stream.component.html',
+  styleUrls: ['./student-stream.component.scss'],
 })
-export class StreamRoomComponent implements OnInit {
+export class StudentStreamComponent implements OnInit {
   title = 'Testing Angular Video';
   localCallId = 'angular-local';
   remoteCalls: string[] = [];
