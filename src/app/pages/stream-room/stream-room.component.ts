@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import {
   NgxAgoraService,
   Stream,
@@ -17,15 +19,23 @@ export class StreamRoomComponent implements OnInit {
   title = 'Testing Angular Video';
   localCallId = 'angular-local';
   remoteCalls: string[] = [];
+  channelName: string;
 
   private client: AgoraClient;
   private localStream: Stream;
   private uid: number;
-  constructor(private agoraService: NgxAgoraService) {
+  constructor(
+    private route: ActivatedRoute,
+    private agoraService: NgxAgoraService
+  ) {
     this.uid = Math.floor(Math.random() * 100);
   }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      this.channelName = params.get('channelname');
+    });
+
     this.client = this.agoraService.createClient({
       mode: 'rtc',
       codec: 'h264',
@@ -52,7 +62,7 @@ export class StreamRoomComponent implements OnInit {
     onSuccess?: (uid: number | string) => void,
     onFailure?: (error: Error) => void
   ): void {
-    this.client.join(null, 'foo-bar', this.uid, onSuccess, onFailure);
+    this.client.join(null, this.channelName, this.uid, onSuccess, onFailure);
   }
 
   publish(): void {

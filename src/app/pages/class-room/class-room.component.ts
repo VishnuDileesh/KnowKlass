@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassRoomComponent implements OnInit {
   roomid: number;
+  channelName: string;
 
   constructor() {
     this.roomid = Math.floor(Math.random() * 100);
+    this.channelName = `channel-name-${Math.floor(Math.random() * 10000)}`;
   }
 
   ngOnInit(): void {}

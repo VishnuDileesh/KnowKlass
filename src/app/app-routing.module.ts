@@ -6,7 +6,10 @@ import { StreamRoomComponent } from './pages/stream-room/stream-room.component';
 
 const routes: Routes = [
   { path: 'classroom/10c', component: ClassRoomComponent },
-  { path: 'classroom/10c/:roomid', component: StreamRoomComponent },
+  {
+    path: 'classroom/10c/:roomid/:channelname',
+    component: StreamRoomComponent,
+  },
 ];
 
 @NgModule({

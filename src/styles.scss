@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 $dark-blue: #130f40;
+$midnight-blue: #2c3e50;
 
 * {
   margin: 0;
@@ -11,6 +12,7 @@ $dark-blue: #130f40;
 
 body {
   color: $dark-blue;
+  background-color: $dark-blue;
   font-family: "Poppins", sans-serif;
 }
 

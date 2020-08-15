@@ -7,7 +7,9 @@
     </div>
   </header> -->
 
-  <section id="video-grid">
+  <app-stream-main [remoteCalls]="remoteCalls"></app-stream-main>
+
+  <!-- <section id="video-grid">
     <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote"></div>
-  </section>
+  </section> -->
 </main>
