@@ -1,7 +1,4 @@
 <header>
   <h1>Class: 10C</h1>
-  <a href="" class="btn">Start Class</a>
-  <div [id]="localCallId" class="local"></div>
-
-  <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote"></div>
+  <a [routerLink]="['/classroom/10c/', roomid]" class="btn">Start Class</a>
 </header>

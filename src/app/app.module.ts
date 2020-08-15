@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { ClassRoomComponent } from './pages/class-room/class-room.component';
 
 import { environment } from '../environments/environment.prod';
+import { StreamRoomComponent } from './pages/stream-room/stream-room.component';
 
 // const agoraConfig: AgoraConfig = {
 //   AppID: environment.AGORA_APPID,
 // };
 
 @NgModule({
-  declarations: [AppComponent, ClassRoomComponent],
+  declarations: [AppComponent, ClassRoomComponent, StreamRoomComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
