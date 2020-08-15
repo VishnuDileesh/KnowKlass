@@ -11,13 +11,14 @@ import { environment } from '../environments/environment.prod';
 import { StreamRoomComponent } from './pages/stream-room/stream-room.component';
 import { StreamHeaderComponent } from './components/stream-header/stream-header.component';
 import { StreamMainComponent } from './components/stream-main/stream-main.component';
+import { StreamVideoComponent } from './components/stream-video/stream-video.component';
 
 // const agoraConfig: AgoraConfig = {
 //   AppID: environment.AGORA_APPID,
 // };
 
 @NgModule({
-  declarations: [AppComponent, ClassRoomComponent, StreamRoomComponent, StreamHeaderComponent, StreamMainComponent],
+  declarations: [AppComponent, ClassRoomComponent, StreamRoomComponent, StreamHeaderComponent, StreamMainComponent, StreamVideoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

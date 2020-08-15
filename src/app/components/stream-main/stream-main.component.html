@@ -1,3 +1,8 @@
 <section id="video-grid">
-  <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote"></div>
+  <app-stream-video
+    class="remote"
+    *ngFor="let callId of remoteCalls"
+    [remoteCallerId]="callId"
+  ></app-stream-video>
+  <!-- <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote"></div> -->
 </section>
