@@ -99,7 +99,7 @@ export class StreamRoomComponent implements OnInit {
 
       if (!this.remoteCalls.includes(`agora_remote${id}`)) {
         this.remoteCalls.push(id);
-        console.log(`Vishnu: remote list is ${this.remoteCalls}`);
+        // console.log(`Vishnu: remote list is ${this.remoteCalls}`);
         setTimeout(() => stream.play(id), 1000);
       }
     });
