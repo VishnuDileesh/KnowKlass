@@ -6,6 +6,7 @@ import {
   AgoraClient,
   ClientEvent,
 } from 'ngx-agora';
+import { compileNgModule } from '@angular/compiler';
 
 @Component({
   selector: 'app-stream-room',
@@ -87,8 +88,18 @@ export class StreamRoomComponent implements OnInit {
     this.client.on(ClientEvent.RemoteStreamSubscribed, (evt) => {
       const stream = evt.stream as Stream;
       const id = this.getRemoteId(stream);
-      if (!this.remoteCalls.length) {
+      // if (!this.remoteCalls.length) {
+      //   this.remoteCalls.push(id);
+      //   console.log(`Vishnu: the id is ${id}`);
+      //   console.log(`Vishnu: remote list is ${this.remoteCalls}`);
+      //   setTimeout(() => stream.play(id), 1000);
+      // }
+
+      console.log(`Vishnu: ${id}`);
+
+      if (!this.remoteCalls.includes(`agora_remote${id}`)) {
         this.remoteCalls.push(id);
+        console.log(`Vishnu: remote list is ${this.remoteCalls}`);
         setTimeout(() => stream.play(id), 1000);
       }
     });
