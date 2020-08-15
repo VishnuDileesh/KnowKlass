@@ -39,7 +39,25 @@ export class ClassRoomComponent implements OnInit {
       screen: false,
     });
     this.assignLocalStreamHandlers();
-    this.initLocalStream();
+    this.initLocalStream(() =>
+      this.join(
+        (uid) => this.publish(),
+        (error) => console.error(error)
+      )
+    );
+  }
+
+  join(
+    onSuccess?: (uid: number | string) => void,
+    onFailure?: (error: Error) => void
+  ): void {
+    this.client.join(null, 'foo-bar', this.uid, onSuccess, onFailure);
+  }
+
+  publish(): void {
+    this.client.publish(this.localStream, (err) =>
+      console.log('Publish local stream error: ' + err)
+    );
   }
 
   private assignClientHandlers(): void {
